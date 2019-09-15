@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1095689335882",
+    "firebase_url": "https://katty-app-v2.firebaseio.com",
+    "project_id": "katty-app-v2",
+    "storage_bucket": "katty-app-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095689335882:android:e8056cd52f68e226c7e2b3",
+        "android_client_info": {
+          "package_name": "com.example.kattyappv22"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095689335882-u8epq5l3akq75oabjtfofu8a7n8gb8lr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kattyappv22",
+            "certificate_hash": "c94aa308d869caf446550cfb0f55b3d951343ab6"
+          }
+        },
+        {
+          "client_id": "1095689335882-fpj7anq8mcd8off97hpp97ueibl6nkue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaJuf1fNiIAwIZddTFD4vbDeiBLsjHXy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095689335882-fpj7anq8mcd8off97hpp97ueibl6nkue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

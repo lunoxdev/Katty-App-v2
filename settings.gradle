@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Katty App v2.2'
