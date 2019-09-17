@@ -7,6 +7,17 @@
     tools:context=".act_menu">
 
 
+    <ProgressBar
+        android:id="@+id/progress_circular1"
+        android:layout_width="104dp"
+        android:layout_height="72dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="181dp"
+        android:layout_marginBottom="478dp"
+        android:visibility="gone"/>
+
     <Button
         android:id="@+id/btn_cerrarsesion"
         android:layout_width="wrap_content"
@@ -15,9 +26,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="316dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginRight="127dp"
+        android:layout_marginTop="614dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginRight="113dp"
         android:background="@drawable/btn_cerrarsesion"
         tools:layout_editor_absoluteY="418dp" />
 
