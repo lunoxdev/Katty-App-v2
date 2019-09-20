@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/fondo"
+        android:layout_width="match_parent"
+        android:layout_height="525dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:srcCompat="@drawable/view_fondo" />
 
     <ProgressBar
         android:id="@+id/progress_circular"
@@ -26,40 +38,27 @@
         android:layout_marginTop="-1dp"
         android:background="@drawable/logo2" />
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/btn_google"
-        android:layout_width="wrap_content"
-        android:layout_height="63dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="259dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginRight="67dp"
-        android:layout_marginBottom="409dp" />
+
+
 
     <EditText
         android:id="@+id/txt_email"
         android:layout_width="wrap_content"
-        android:layout_height="52dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginLeft="69dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginRight="67dp"
-        android:layout_marginBottom="217dp"
-        android:hint="Correo Electrónico"
-        android:inputType="textEmailAddress" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginBottom="296dp"
+        android:hint="@string/correo_electr_nico"
+        android:inputType="textEmailAddress"
+        tools:ignore="RtlHardcoded" />
 
     <EditText
         android:id="@+id/txt_password"
@@ -70,59 +69,40 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="71dp"
-        android:layout_marginLeft="71dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="67dp"
-        android:layout_marginBottom="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginRight="69dp"
+        android:layout_marginBottom="235dp"
         android:ems="10"
-        android:hint="Contraseña"
-        android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/btn_facebook"
-        android:layout_width="267dp"
-        android:layout_height="52dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
-        android:layout_marginBottom="333dp"
-        android:background="@drawable/btn_facebook" />
+        android:hint="@string/contrase_a"
+        android:inputType="textPassword"
+        tools:ignore="RtlHardcoded" />
 
     <TextView
-        android:id="@+id/lineadivisora"
-        android:layout_width="252dp"
-        android:layout_height="9dp"
+        android:id="@+id/btn_restauracontra"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginEnd="79dp"
-        android:layout_marginRight="79dp"
-        android:layout_marginBottom="282dp"
-        android:background="@drawable/lineadivisora"/>
-
-    <Button
-        android:id="@+id/btn_registrarse"
-        android:layout_width="122dp"
-        android:layout_height="73dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="71dp"
-        android:layout_marginRight="71dp"
-        android:layout_marginBottom="42dp"
-        android:background="@drawable/btn_registrar" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="74dp"
+        android:layout_marginLeft="74dp"
+        android:layout_marginBottom="191dp"
+        android:clickable="true"
+        android:onClick="respassword"
+        android:shadowColor="#80000000"
+        android:shadowDy="4"
+        android:shadowRadius="7"
+        android:text="@string/olvid_la_contrase_a"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:focusable="true"
+        tools:ignore="RtlHardcoded" />
 
     <Button
         android:id="@+id/btn_ingresar"
@@ -131,10 +111,50 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginBottom="49dp"
-        android:background="@drawable/btn_ingresar" />
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/btn_ingresar"
+        tools:ignore="RtlHardcoded" />
 
+    <Button
+        android:id="@+id/btn_registrarse"
+        android:layout_width="122dp"
+        android:layout_height="73dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:layout_marginBottom="67dp"
+        android:background="@drawable/btn_registrar"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/lineadivisora"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginRight="73dp"
+        android:layout_marginBottom="364dp"
+        android:background="@drawable/lineadivisora"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/btn_google"
+        android:layout_width="277dp"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="290dp"
+        android:background="@drawable/btn_google" />
 
 </RelativeLayout>

@@ -23,7 +23,7 @@ public class act_menu extends AppCompatActivity {
         setContentView(R.layout.activity_act_menu);
 
         //asignar variables
-        progressBar = findViewById(R.id.progress_circular1);
+        progressBar = findViewById(R.id.progress_circular);
 
         sign_out = findViewById(R.id.btn_cerrarsesion);
 

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,11 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
     int RC_SIGN_IN = 0;
     //Variable para el Sign In
-    SignInButton signInButton;
+    Button signInButton;
     //Variable para poder usar el autenticador de Firebase
     GoogleSignInClient mGoogleSignInClient;
     //Variable para el progressBar
     ProgressBar progressBar;
+    //Variable para el Activity de restaurador de contraseña
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         //asignar variables
         progressBar = findViewById(R.id.progress_circular);
+        progressBar.setVisibility(ProgressBar.INVISIBLE);
 
         //Initializing Views
         signInButton = findViewById(R.id.btn_google);
@@ -55,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -82,11 +86,16 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (ApiException e) {
 
-            progressBar.setVisibility(ProgressBar.VISIBLE);
+            progressBar.setVisibility(ProgressBar.INVISIBLE);
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
             Log.w("Google Sign In Error", "signInResult:failed code=" + e.getStatusCode());
             Toast.makeText(MainActivity.this, "Failed", Toast.LENGTH_LONG).show();
         }
+    }
+
+    public void respassword(View view) {
+        progressBar.setVisibility(ProgressBar.VISIBLE);
+        startActivity(new Intent(MainActivity.this, act_forgpassword.class));
     }
 }
