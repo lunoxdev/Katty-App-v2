@@ -1,22 +1,30 @@
 package com.example.kattyappv22;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
+
+    //Variables
 
     int RC_SIGN_IN = 0;
     //Variable para el Sign In
@@ -25,12 +33,29 @@ public class MainActivity extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     //Variable para el progressBar
     ProgressBar progressBar;
-    //Variable para el Activity de restaurador de contraseña
+    //Variables para el Registro Authenticado por email y password
+    //private EditText TextMail;
+    //private EditText TextPassword;
+    //private Button Ingresar;
+    //private ProgressDialog progressDialog;
+
+    //Autenticacion para el registro por mail y el password
+    //private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Instancia para la Autenticacion
+        //firebaseAuth = FirebaseAuth.getInstance();
+
+
+        //Asignar variables para el Registro
+        //TextMail = findViewById(R.id.txt_email);
+        //TextPassword = findViewById(R.id.txt_password);
+        //Ingresar = findViewById(R.id.btn_ingresar);
+
 
         //asignar variables
         progressBar = findViewById(R.id.progress_circular);
@@ -58,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -90,12 +114,18 @@ public class MainActivity extends AppCompatActivity {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
             Log.w("Google Sign In Error", "signInResult:failed code=" + e.getStatusCode());
-            Toast.makeText(MainActivity.this, "Failed", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Falló el inicio de sesion", Toast.LENGTH_LONG).show();
         }
     }
 
+    //Metodo para pasar al activity forgot password si da click en olvido de contraseña
     public void respassword(View view) {
         progressBar.setVisibility(ProgressBar.VISIBLE);
         startActivity(new Intent(MainActivity.this, act_forgpassword.class));
+    }
+
+    public void registrarse(View view) {
+        progressBar.setVisibility(ProgressBar.VISIBLE);
+        startActivity(new Intent(MainActivity.this, act_registrarse.class));
     }
 }
