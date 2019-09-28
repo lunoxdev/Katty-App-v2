@@ -18,6 +18,18 @@
         android:layout_marginRight="0dp"
         app:srcCompat="@drawable/view_fondo" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="292dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="-31dp"
+        app:srcCompat="@drawable/ovalfondo" />
+
     <ProgressBar
         android:id="@+id/progress_circular"
         android:layout_width="104dp"
@@ -29,17 +41,15 @@
         android:layout_marginBottom="478dp"
         android:visibility="gone"/>
 
+
     <TextView
         android:id="@+id/logo"
-        android:layout_width="407dp"
-        android:layout_height="250dp"
+        android:layout_width="267dp"
+        android:layout_height="151dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="-1dp"
-        android:background="@drawable/logo2" />
-
-
-
+        android:layout_marginTop="18dp"
+        android:background="@drawable/logoo" />
 
     <EditText
         android:id="@+id/txt_email"
@@ -106,6 +116,7 @@
 
     <Button
         android:id="@+id/btn_ingresar"
+        android:onClick="ingresar"
         android:layout_width="114dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
