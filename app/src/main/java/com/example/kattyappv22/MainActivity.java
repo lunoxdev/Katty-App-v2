@@ -1,5 +1,6 @@
 package com.example.kattyappv22;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-import android.app.ProgressDialog;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -22,7 +22,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.auth.FirebaseUser;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -86,7 +86,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 signIn();
                 // Si el logeo fue exitoso, nos manda al otro activity
-                progressBar.setVisibility(ProgressBar.VISIBLE);
+                progressDialog.setMessage("Validando, Por favor espere...");
+                progressDialog.show();
             }
         });
 
@@ -126,10 +127,9 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this,"Inicio de session Exitoso!!", Toast.LENGTH_SHORT).show();
 
         } catch (ApiException e) {
-
-            progressBar.setVisibility(ProgressBar.INVISIBLE);
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
+            progressDialog.dismiss();
             Log.w("Google Sign In Error", "signInResult:failed code=" + e.getStatusCode());
             Toast.makeText(MainActivity.this, "Falló el inicio de sesion", Toast.LENGTH_LONG).show();
         }
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void ingresar(){
         //Aca se obtiene lo que hay en las cajas de texto
-        String email = TextMail.getText().toString().trim();
+        String email = TextMail.getText().toString();
         String password = TextPassword.getText().toString().trim();
 
         //Si estan vacias manda estos errores
@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Si los datos son correctos
-        progressDialog.setMessage("Realizando el registro...");
+        progressDialog.setMessage("Validando, Por favor espere...");
         progressDialog.show();
 
         //Funcion para logearse
