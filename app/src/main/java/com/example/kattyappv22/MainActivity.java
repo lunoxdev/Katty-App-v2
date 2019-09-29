@@ -154,11 +154,11 @@ public class MainActivity extends AppCompatActivity {
 
         //Si estan vacias manda estos errores
         if (TextUtils.isEmpty(email)) {
-            Toast.makeText(this, "Debes ingresar un correo valido", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show();
             return;
         }
         if (TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "Debes ingresar una contraseña valida", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show();
             return;
         }
 

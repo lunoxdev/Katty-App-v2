@@ -19,7 +19,7 @@
         android:visibility="gone"/>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/fondologo"
         android:layout_width="match_parent"
         android:layout_height="292dp"
         android:layout_alignParentStart="true"
@@ -40,7 +40,7 @@
         android:background="@drawable/logoo" />
 
     <ImageView
-        android:id="@+id/fondo"
+        android:id="@+id/fondoformulario"
         android:layout_width="match_parent"
         android:layout_height="525dp"
         android:layout_alignParentEnd="true"
@@ -52,6 +52,7 @@
 
     <Button
         android:id="@+id/btn_registrarse"
+        android:onClick="registrarse"
         android:layout_width="107dp"
         android:layout_height="54dp"
         android:layout_alignParentStart="true"
@@ -75,7 +76,7 @@
         android:layout_marginLeft="207dp"
         android:layout_marginBottom="97dp"
         android:background="@drawable/btn_atras"
-        android:onClick="atras2"
+        android:onClick="atras"
         android:textColor="#C7C7C7"
         tools:ignore="HardcodedText" />
 
@@ -100,6 +101,26 @@
         tools:ignore="HardcodedText" />
 
     <EditText
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="337dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:ems="10"
+        android:hint="Correo Electrónico"
+        android:inputType="textEmailAddress"
+        tools:ignore="HardcodedText" />
+
+    <EditText
         android:id="@+id/txt_password"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
@@ -120,7 +141,7 @@
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/txt_Confirmpassword"
+        android:id="@+id/txt_confirmpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -157,26 +178,6 @@
         android:ems="10"
         android:hint="Numero de telefono"
         android:inputType="phone"
-        tools:ignore="HardcodedText" />
-
-    <EditText
-        android:id="@+id/txt_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="99dp"
-        android:layout_marginLeft="99dp"
-        android:layout_marginTop="337dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginRight="99dp"
-        android:ems="10"
-        android:hint="Correo Electrónico"
-        android:inputType="textEmailAddress"
         tools:ignore="HardcodedText" />
 
 </RelativeLayout>
