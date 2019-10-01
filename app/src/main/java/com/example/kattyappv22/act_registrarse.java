@@ -54,7 +54,7 @@ public class act_registrarse extends AppCompatActivity {
         Registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registrarse();
+                registrarse(v);
             }
         });
 
@@ -69,13 +69,13 @@ public class act_registrarse extends AppCompatActivity {
         startActivity(new Intent(act_registrarse.this, MainActivity.class));
     }
 
-    public void registrarse() {
+    public void registrarse(View view) {
         //Aca se obtiene lo que hay en las cajas de texto
         String nombre = TextNombre.getText().toString();
         String email = TextEmail.getText().toString();
         String password = TextPassword.getText().toString().trim();
         String confirpassword = TextConfirPassword.getText().toString().trim();
-        //int phone = Integer.parseInt(TextPhone.getText().toString());
+        String phone = TextPhone.getText().toString();
 
         //Si estan vacias manda estos errores
         if (TextUtils.isEmpty(nombre)) {
@@ -94,10 +94,14 @@ public class act_registrarse extends AppCompatActivity {
             Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show();
             return;
         }
-        //if (TextUtils.isEmpty(phone)) {
-            //Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show();
-            //return;
-        //}
+        if (password.length() < 6) {
+            Toast.makeText(getApplicationContext(), "La contraseña debe tener al menos 6 carácteres!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (TextUtils.isEmpty(phone)) {
+            Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show();
+            return;
+        }
         if (!password.equals(confirpassword)) {
             Toast.makeText(this,"La contraseñas no coinciden",Toast.LENGTH_LONG).show();
             return;
@@ -117,7 +121,11 @@ public class act_registrarse extends AppCompatActivity {
                             startActivity(new Intent(act_registrarse.this, MainActivity.class));
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(act_registrarse.this, "Datos Incorrectos", Toast.LENGTH_LONG).show();
+                            if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                                Toast.makeText(act_registrarse.this, "Este correo ya se encuentra registrado", Toast.LENGTH_SHORT).show();
+                            }else {
+                                Toast.makeText(act_registrarse.this, "Datos Incorrectos", Toast.LENGTH_LONG).show();
+                            }
                         }
 
                         progressDialog.dismiss();
