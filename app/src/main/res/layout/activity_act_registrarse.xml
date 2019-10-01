@@ -96,7 +96,7 @@
         android:layout_marginEnd="99dp"
         android:layout_marginRight="99dp"
         android:ems="10"
-        android:hint="Nombre Completo"
+        android:hint="Nombre completo"
         android:inputType="textPersonName"
         tools:ignore="HardcodedText" />
 
@@ -116,7 +116,7 @@
         android:layout_marginEnd="99dp"
         android:layout_marginRight="99dp"
         android:ems="10"
-        android:hint="Correo Electrónico"
+        android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
         tools:ignore="HardcodedText" />
 
@@ -156,7 +156,7 @@
         android:layout_marginEnd="98dp"
         android:layout_marginRight="98dp"
         android:ems="10"
-        android:hint="Confirme su Contraseña"
+        android:hint="Confirme su contraseña"
         android:inputType="textPassword"
         tools:ignore="HardcodedText" />
 
@@ -176,7 +176,7 @@
         android:layout_marginEnd="99dp"
         android:layout_marginRight="99dp"
         android:ems="10"
-        android:hint="Numero de telefono"
+        android:hint="Numero de teléfono"
         android:inputType="phone"
         tools:ignore="HardcodedText" />
 
