@@ -39,5 +39,3 @@ I want to invite you to check the next version on this Link called "Kathy" that 
 A new version of  Katty app but using a better designs, interactions and splashcreen! Enjoy!
 
 https://pasteboard.co/IDu6vo3.png
-
-https://pasteboard.co/IDu6vo3.png
