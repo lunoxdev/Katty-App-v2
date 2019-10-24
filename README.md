@@ -36,6 +36,8 @@ https://pasteboard.co/IDu4qa7.png
 # And please,
 
 I want to invite you to check the next version on this Link called "Kathy" that I Designed in Sketch.
-A new version of  Katty app but using a better design interactions! Enjoy!
+A new version of  Katty app but using a better designs, interactions and splashcreen! Enjoy!
+
+https://pasteboard.co/IDu6vo3.png
 
 https://pasteboard.co/IDu6vo3.png
