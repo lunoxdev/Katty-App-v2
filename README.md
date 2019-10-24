@@ -1,3 +1,6 @@
+# FirstKattyApp
+First app, using GitHub (Comit and push) ) buttons works, sorry for my design!
+
 # Katty-App-v2
 
 This applicatiion allow you make an appoitment with your favorite hair stylist.
