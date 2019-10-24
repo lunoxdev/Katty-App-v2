@@ -3,7 +3,7 @@
 This applicatiion allow you make an appoitment with your favorite hair stylist.
 
 In this version I connected firebase real time database and also you can login using a google account!!
-Restore password still not working yet!
+Restore password still not working yet!!
 
 # Screenshots App
 
@@ -32,3 +32,9 @@ https://pasteboard.co/IDu2fIS.png
 
 Firebase Login
 https://pasteboard.co/IDu4qa7.png
+
+#And please,
+
+I want to invite you to check the next version on this Link called "Kathy" that I Designed in Sketch! Enjoy!
+
+https://pasteboard.co/IDu6vo3.png
