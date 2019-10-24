@@ -33,8 +33,9 @@ https://pasteboard.co/IDu2fIS.png
 Firebase Login
 https://pasteboard.co/IDu4qa7.png
 
-#And please,
+# And please,
 
-I want to invite you to check the next version on this Link called "Kathy" that I Designed in Sketch! Enjoy!
+I want to invite you to check the next version on this Link called "Kathy" that I Designed in Sketch.
+A new version of  Katty app but using a better design interactions! Enjoy!
 
 https://pasteboard.co/IDu6vo3.png
