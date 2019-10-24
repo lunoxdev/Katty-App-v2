@@ -28,16 +28,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="-31dp"
-        app:srcCompat="@drawable/ovalfondo" />
-
-    <TextView
-        android:id="@+id/logo"
-        android:layout_width="267dp"
-        android:layout_height="151dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/logoo" />
+        app:srcCompat="@drawable/logo2" />
 
     <ImageView
         android:id="@+id/fondoformulario"
