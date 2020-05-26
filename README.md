@@ -5,23 +5,9 @@ This applicatiion allow you make an appoitment with your favorite hair stylist.
 In this version I connected firebase real time database and also you can login using a google account!!
 Restore password still not working yet!!
 
-# Screenshots App
+# Prototype
 
-Login
-
-https://pasteboard.co/IDtQXxq.png
-
-Sign Up
-
-https://pasteboard.co/IDtSMNSV.png
-
-Restore Password
-
-https://pasteboard.co/IDtTJcJ.png
-
-Menu
-
-https://pasteboard.co/IDtUc30.png
+https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDkzNjY1NDIyMDgyMDAy?igshid=vvh2mij7vshf&story_media_id=2317438792975393041_21383801431
 
 # Screenshots Firebase
 
