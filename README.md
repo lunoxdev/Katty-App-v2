@@ -1,27 +1,10 @@
 # Katty-App-v2
 
-This applicatiion allow you make an appoitment with your favorite hair stylist.
-
 In this version I connected firebase real time database and also you can login using a google account!!
 Restore password still not working yet!!
 
-# Prototype
+<img width="286" alt="Screenshot 2020-09-20 at 17 41 05" src="https://user-images.githubusercontent.com/55005374/93724962-b03a4200-fb68-11ea-890c-f94a6fe26f97.png">
 
-https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDkzNjY1NDIyMDgyMDAy?igshid=vvh2mij7vshf&story_media_id=2317438792975393041_21383801431
+![59a414cf-35c8-421d-a1a6-b40e949e53af](https://user-images.githubusercontent.com/55005374/93724973-c5af6c00-fb68-11ea-9369-9bb5ecc67b81.png)
 
-# Screenshots Firebase
-
-Firebase Console
-https://pasteboard.co/IDu2fIS.png
-
-# Screenshots Googles Services
-
-Firebase Login
-https://pasteboard.co/IDu4qa7.png
-
-# And please,
-
-I want to invite you to check the next version on this Link called "Kathy" that I Designed in Sketch.
-A new version of  Katty app but using a better designs, interactions and splashcreen! Enjoy!
-
-https://pasteboard.co/IE0V6ub.png
+<img width="1181" alt="74ad39e0-032c-48a6-9045-6a35e9e9e57d" src="https://user-images.githubusercontent.com/55005374/93724978-cc3de380-fb68-11ea-801f-ae1d7f578322.png">
